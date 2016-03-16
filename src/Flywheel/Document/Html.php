@@ -326,8 +326,8 @@ class Html extends BaseDoc {
 		} else {
 			$css = '';
 			foreach ($this->_stylesheet as $file=>$media) {
-				$media = ((is_array($media))? implode(', ', $media) : 'screen') .'"';
-				if (null != $media) {
+				$media = ((is_array($media))? implode(', ', $media) : 'screen');
+				if (null == $media) {
 					$media = 'screen';				
 				}
                 if (strpos($file, 'http') !== false) {
